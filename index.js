@@ -26,9 +26,15 @@ function _getManifestData(file, opts) {
             return;
         }
         if (_.isObject(json)) {
-            var isRev = 1;
+            var isRev = 1,
+                value;
             Object.keys(json).forEach(function (key) {
-                if ( path.basename(json[key]).replace(new RegExp( opts.revSuffix ), '' ) !==  path.basename(key) ) {
+                if (opts.isRequirejs){
+                    value = path.basename(json[key]).replace(new RegExp( opts.revSuffix ), '' ).replace(/\.js/, '');
+                }else{
+                    value = path.basename(json[key]).replace(new RegExp( opts.revSuffix ), '' );
+                }
+                if ( value !==  path.basename(key) ) {
                     isRev = 0;
                 }
             });

@@ -1,15 +1,11 @@
 {
-  "name": "gulp-rev-collector",
-  "version": "1.0.2",
-  "description": "Static asset revision data collector from manifests, generated from different streams, and replace their links in html template.",
+  "name": "gulp-rev-collector-r",
+  "version": "0.0.1",
+  "description": "base on gulp-rev-collector, add replace to require module in js",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/shonny-ua/gulp-rev-collector"
-  },
-  "author": {
-    "name": "Oleksandr Ovcharenko",
-    "email": "shonny.ua@gmail.com"
+    "url": "https://github.com/xingmolu/gulp-rev-collector"
   },
   "main": "index.js",
   "files": [
@@ -25,6 +21,7 @@
     "gulpplugin",
     "gulp",
     "rev",
+    "requirejs",
     "revision",
     "version",
     "versioning",
@@ -42,8 +39,5 @@
   "devDependencies": {
     "mocha": "*"
   },
-  "bugs": {
-    "url": "https://github.com/shonny-ua/gulp-rev-collector/issues"
-  },
-  "homepage": "https://github.com/shonny-ua/gulp-rev-collector"
+  "homepage": "https://github.com/xingmolu/gulp-rev-collector"
 }
